@@ -46,6 +46,7 @@ The rest are drawn on the XYZ axes respectively
 note: This dataset contains 506 records.
 
 ![BOSTON](result/波士頓房價與因子散佈圖(scatter).png)
+*boston
 
 ## 鳶尾花
 資料集內有五個資訊：
