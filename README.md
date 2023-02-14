@@ -82,3 +82,4 @@ In addition, depending on the classification results, there will be
 3. Comparison results of real species and grouping into 3 groups
 4. Kmean cluster result (4 group)
 
+![IRIS subplot](result/鳶尾花物種分群(subplog).png "鳶尾花物種分群(subplog)")
