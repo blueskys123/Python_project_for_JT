@@ -25,7 +25,7 @@ plt.rcParams['font.size']=20
 boston=datasets.load_boston()
 df=pd.DataFrame(boston.data,columns=boston.feature_names)
 df["MEDV"]=boston.target # 新增資料組到df中
-print(df)
+#print(df)
 
 
 #使用plot method，這樣才能標示label
@@ -49,9 +49,9 @@ axes = plt.subplot(projection='3d')  #設定成三D
 axes.plot(CHAS0['RM'],CHAS0['LSTAT'],CHAS0['NOX'],"x",label="CHAS 0",alpha=0.1,markersize=10)   
 axes.plot(CHAS1['RM'],CHAS1['LSTAT'],CHAS1['NOX'],"o",label="CHAS 1",alpha=0.5,markersize=10)  
 
-axes.set_xlabel("RM: 每栋住宅的房间数")
-axes.set_ylabel("LSTAT: 地区中有多少房东属于低收入人群")
-axes.set_zlabel("NOX: 环保指数")
+axes.set_xlabel("RM: 每棟住宅的房間數")
+axes.set_ylabel("LSTAT: 地區中有多少房東是屬於低收入戶族群")
+axes.set_zlabel("NOx: 氮氧化物(10ppm)")
 
 
 axes.yaxis.labelpad=30 #label相對位置調整
@@ -59,12 +59,13 @@ axes.zaxis.labelpad=30
 axes.xaxis.labelpad=30
 
 plt.legend()
+plt.savefig('波士頓房價與因子散佈圖(plot).png', bbox_inches='tight')
 plt.show()
 
 plt.figure(figsize=(17,17))  
 
 axes = plt.axes(projection='3d')
-axes.set(xlim=(5,8),ylim=(5,30),zlim=(0.5,0.6))
+#axes.set(xlim=(5,8),ylim=(5,30),zlim=(0.5,0.6))
 """
 axes.set_xlim(5,8)
 axes.set_ylim(5,30)
@@ -78,7 +79,7 @@ axes.scatter(CHAS1['RM'],CHAS1['LSTAT'], CHAS1['NOX'],\
      marker="o",alpha=0.6,label="接近查爾斯河畔")
 axes.set_xlabel("RM: 每棟住宅的房間數")
 axes.set_ylabel("LSTAT: 地區中有多少房東屬於低收入人群")
-axes.set_zlabel("NOx: 氮氧化物")
+axes.set_zlabel("NOx: 氮氧化物(10ppm)")
 #axes.dist = 10
 
 axes.yaxis.labelpad=30 #label相對位置調整
@@ -88,4 +89,5 @@ axes.xaxis.labelpad=30
 plt.legend()
 txt="點的大小與價格成正相關"
 plt.figtext(0.5, 0.10, txt, wrap=True, horizontalalignment='center', fontsize=16)
+plt.savefig('波士頓房價與因子散佈圖(scatter).png', bbox_inches='tight')
 plt.show()

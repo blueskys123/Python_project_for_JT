@@ -16,6 +16,7 @@ from mpl_toolkits import mplot3d
 #整理資料
 iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
+
 df.columns = ["sepal_length","sepal_width","petal_length","petal_width"]  #置換column name
 
 
@@ -198,6 +199,8 @@ scatters.legend()
 #scatters.legend(("iris setosa","iris setosa2","iris setosa3"))
 txt="點的大小與sepal length成正相關"
 plt.figtext(0.5, 0.10, txt, wrap=True, horizontalalignment='center', fontsize=16)
+plt.savefig('鳶尾花物種分群-真實物種分類.png', bbox_inches='tight')
+
 plt.show()
 #---------------------------------------------------------
 plt.figure(figsize=(17,17))
@@ -228,7 +231,9 @@ scatters_predict.set_zlim(0,2.5)
 scatters_predict.yaxis.labelpad=30 #label相對位置調整
 scatters_predict.zaxis.labelpad=30
 scatters_predict.xaxis.labelpad=30
-scatters_predict.legend()    
+scatters_predict.legend()   
+plt.savefig('鳶尾花物種分群-Kmean cluster (3 group).png', bbox_inches='tight')
+ 
 plt.show()
 #---------------------------------------------------------
 plt.figure(figsize=(17,17))
@@ -265,6 +270,7 @@ scatters_predict.yaxis.labelpad=30 #label相對位置調整
 scatters_predict.zaxis.labelpad=30
 scatters_predict.xaxis.labelpad=30
 scatters_predict.legend()    
+plt.savefig('鳶尾花物種分群-Kmean cluster (4 group).png', bbox_inches='tight')
 
 plt.show()
 
@@ -318,6 +324,8 @@ scatters_mix.zaxis.labelpad=30
 
 scatters_mix.xaxis.labelpad=30
 scatters_mix.legend()
+plt.savefig('鳶尾花物種分群-comparison (物種分類vs Kmean 4group).png', bbox_inches='tight')
+
 plt.show()
 
 #----------------------------------------------------
@@ -340,4 +348,6 @@ ax_diff.zaxis.labelpad=30
 
 ax_diff.xaxis.labelpad=30
 ax_diff.legend()
+plt.savefig('鳶尾花物種分群-different (物種分類vs Kmean 3group).png', bbox_inches='tight')
+
 plt.show()

@@ -347,4 +347,6 @@ ax_diff.zaxis.labelpad=30
 
 ax_diff.xaxis.labelpad=10
 ax_diff.legend()
+plt.savefig('鳶尾花物種分群(subplog).png', bbox_inches='tight')
 plt.show()
+
