@@ -53,8 +53,31 @@ note: This dataset contains 506 records.
     花萼寬
     花瓣長
     花瓣寬
-    實際物種分類(<I>Iris Setosa</I>、)
-    -- Iris Setosa
--- Iris Versicolour
--- Iris Virginica
+    實際物種分類(<I>Iris Setosa</I>、<I>Iris Versicolour</I>、<I>Iris Virginica</I>)
+共150筆資料
+
+在本分析中，首先使用Kmean cluster分群法將資料分成3群與4群(分別對應3個物種與4個特徵)
+然後繪製成3D圖，其中群/物種用顏色區分、花萼長用點的大小來辨別、剩下的則是分別繪製成XYZ軸
+此外依據分類的結果不同，分別會有
+    a. 真實物種分布
+    b. Kmean cluster result (3 group)
+    c. 真實物種與分成3群的比較結果
+    d. Kmean cluster result (4 group)
+
+
+There are five factor of information in the data set:
+    Sepal length
+    Sepal width
+    Petal length
+    Petal width
+    Species 
+Total 150 records
+
+In this analysis, the Kmean clustering method to divide the data into 3 groups and 4 groups (corresponding to 3 species and 4 characteristics respectively) at first.
+Then it is drawn into a 3D map, in which the group/species are distinguished by color, the length of the sepal is distinguished by the size of the dot, and the rest are drawn on the XYZ axis respectively
+In addition, depending on the classification results, there will be
+    a. Species Distribution
+    b. Kmean cluster result (3 group)
+    c. Comparison results of real species and grouping into 3 groups
+    d. Kmean cluster result (4 group)
 
